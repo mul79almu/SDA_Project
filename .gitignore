@@ -6,6 +6,9 @@
 
 #ignor secret file
 *.env
+chroma_db/
+chat_logs/
+pdf_store/
 
 
 # User-specific files

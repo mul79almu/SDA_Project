@@ -6,3 +6,13 @@ uvicorn
 pydantic
 requests
 psycopg2-binary
+langchain-community
+langchain-openai
+langchain-chroma
+langchain
+langchain-core
+chromadb
+pypdf
+cryptography==41.0.2
+python-multipart
+streamlit
