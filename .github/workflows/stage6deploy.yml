@@ -48,3 +48,7 @@ jobs:
             --publisher Microsoft.Azure.Extensions \
             --settings '{"fileUris": []}' \
             --protected-settings '{"commandToExecute": "export GITHUB_TOKEN=${{ secrets.TOKEN }} && sudo -u azureuser bash /home/azureuser/SDA_Project/update_app.sh"}'
+
+
+
+      # Logout from Azure
