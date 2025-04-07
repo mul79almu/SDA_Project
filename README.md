@@ -78,7 +78,7 @@ uvicorn backend:app --reload --port 5000
 ```
 
 > Compared to the last stage, we added a `port` parameter to change the port to `5000`. Since the chromadb will also use port 8000, we added this to avoid port conflict.
-
+And then use 
 And then use 
 ```
 streamlit run chatbot.py
