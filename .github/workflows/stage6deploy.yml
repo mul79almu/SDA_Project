@@ -40,6 +40,10 @@ jobs:
       # Update the VM with secure token passing
       - name: Azure VM Update
         run: |
+          echo '{
+           "commandToExecute": "export GITHUB_TOKEN=${{ secrets.TOKEN }} && sudo -u azureuser bash /home/azureuser/SDA_Project/update_app.sh"
+          }' > protected-settings.json
+
           az vm extension set \
           --resource-group ${{ secrets.RESOURCE_GROUP }} \
           --vm-name ${{ secrets.VM_NAME }} \
@@ -47,6 +51,6 @@ jobs:
           --force-update \
           --publisher Microsoft.Azure.Extensions \
           --settings '{}' \
-          --protected-settings "{\"commandToExecute\": \"export GITHUB_TOKEN=\${{ secrets.TOKEN }} && sudo -u azureuser bash /home/azureuser/SDA_Project/update_app.sh\"}"
+          --protected-settings @protected-settings.json
 
       # Logout from Azure
