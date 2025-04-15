@@ -76,7 +76,7 @@ token = storage_account_sas_url.split('?')[1]
 
 app = FastAPI()
 
-# Request models
+# Reequest models
 class ChatRequest(BaseModel):
     messages: List[dict]
 
