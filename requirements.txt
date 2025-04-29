@@ -169,3 +169,8 @@ azure-core==1.32.0
 azure-storage-blob==12.24.0
 azure-identity==1.19.0
 azure-keyvault-secrets==4.9.0
+chromadb
+streamlit
+requests
+azure-identity
+azure-keyvault-secrets
